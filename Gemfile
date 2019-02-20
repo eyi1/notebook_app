@@ -15,6 +15,7 @@ gem 'activerecord-postgresql-adapter', '~> 0.0.1'
 gem 'rack-cors', require: 'rack/cors'
 gem 'foreman', '~> 0.82.0'
 gem 'active_model_serializers'
+gem 'knock'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
