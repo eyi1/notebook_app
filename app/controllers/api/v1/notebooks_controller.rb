@@ -5,16 +5,16 @@ module Api::V1
     @notebooks = Notebook.all 
     render json: @notebooks
     end
-    def new 
-    end
 
     def create
+      if @notebook && @notebook.save
+        render json: @notebook
+      else
+        render json: { message: notebook.errors }, status: 400
+      end
     end
 
     def show
-    end
-
-    def edit
     end
 
     def update 
@@ -23,5 +23,16 @@ module Api::V1
     def destroy
     end
     
+
+    private
+
+    def set_notebook
+      @notebook = Notebook.find_by(id: params[:id])
+    end
+
+    def notebook_params
+      params.require(:notebook).permit(:name)
+    end
+
   end
 end
