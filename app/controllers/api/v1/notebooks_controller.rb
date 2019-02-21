@@ -1,6 +1,6 @@
 module Api::V1
   class NotebooksController < ApplicationController
-    before_action :authenticate_user
+    #before_action :authenticate_user
     before_action :set_notebook, only: [:show, :update, :destroy]
 
     def index
