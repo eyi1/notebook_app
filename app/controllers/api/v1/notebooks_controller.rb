@@ -1,5 +1,6 @@
 module Api::V1
   class NotebooksController < ApplicationController
+    before_action :authenticate_user
     before_action :set_notebook, only: [:show, :update, :destroy]
 
     def index
@@ -25,6 +26,11 @@ module Api::V1
     end
 
     def destroy
+      if @notebook.destroy
+        render json: { message: "Successfully removed item." }, status: 204
+      else
+        render json: { message: "Unable to remove item" }, status: 400
+      end
     end
     
 
