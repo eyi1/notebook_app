@@ -16,8 +16,8 @@ module Api::V1
       end
 
       def create
-       # @note = Note.new(title: params[:title], content: params[:content], notebook_id: params[:notebook_id])
-       @note = Note.new(title: params[:title], content: params[:content], notebook_id: 55)
+       @note = Note.new(title: params[:title], content: params[:content], notebook_id: params[:notebook_id])
+       #@note = Note.new(title: params[:title], content: params[:content], notebook_id: 55)
         if @note && @note.save
           render json: @note
         else
