@@ -30,6 +30,11 @@ module Api::V1
       end
 
       def update 
+        if @note.update(title: params[:title], content: params[:content], notebook_id: params[:notebook_id])
+          render json: @note
+        else
+          render json: { message: @note.errors }, status: 400
+        end
       end
 
       def destroy
