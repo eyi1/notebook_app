@@ -1,0 +1,126 @@
+.App {
+  align-content: center;
+}
+
+.navbar {
+  align-items: center;
+  width: 100%;
+}
+
+#basic-nav-dropdown {
+  float: right;
+}
+
+.signup-form{
+  /* text-align: left; */
+  /* border: .5px solid #dbdbdb; */
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-left: 200px;
+  margin-right: 200px;  */
+  /* box-sizing: border-box; */
+  padding: 15px;
+}
+.signup-form button {
+  margin-left: 15px;
+}
+
+.login-form {
+  /* text-align: left; */
+  /* border: .5px solid #dbdbdb; */
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-left: 200px;
+  margin-right: 200px;  */
+  /* box-sizing: border-box; */
+  padding: 15px;
+}
+.login-form button {
+  margin-left: 15px;
+}
+
+.container-fluid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* padding-bottom: 20px;
+  border-bottom: 1px solid #dbdbdb; */
+}
+
+
+.table .tableLabels {
+  border-bottom: 3px solid #dbdbdb;
+  border-top: 3px solid #dbdbdb;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.notebook-page-title {
+  float: left;
+  justify-content: left;
+  font-size: calc(5px + 2vmin);
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+#basic-navbar-nav .nav-link {
+  text-align: center;
+}
+
+.notesPage {
+  justify-content: center;
+  margin: 0;
+}
+
+.row .notesWrapper {
+  border-right: 1px dotted #dbdbdb;
+}
+
+/* .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* .sidebar {
+  float: left;
+  width: 30vh;
+  height: 100vh;
+  background: grey
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+.table .row { */
+  /* border: 1px solid #dbdbdb; */
+  /* border-bottom: 1px dotted #dbdbdb;
+  border-radius: 0px;
+  padding-top: 10px; */
+/* } */
