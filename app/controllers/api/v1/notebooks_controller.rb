@@ -23,6 +23,11 @@ module Api::V1
     end
 
     def update 
+      if @notebook.update(name: params[:name], user_id: 1)
+        render json: @notebook
+      else
+        render json: { message: @notebook.errors }, status: 400
+      end
     end
 
     def destroy
