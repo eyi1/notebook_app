@@ -22,12 +22,6 @@ Steps:
 -cd notebook and run npm install
 -rake start (should open browser to http://localhost:3000)
 
-#Future Revisions
-
-Future inclusion of:
-
-User authentication
-Edit functionality
 
 #License
 
