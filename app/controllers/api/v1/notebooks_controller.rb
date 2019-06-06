@@ -5,6 +5,7 @@ module Api::V1
 
     def index
     @notebooks = Notebook.all 
+    #@notebooks = current_user.notebooks
     render json: @notebooks
     end
 
