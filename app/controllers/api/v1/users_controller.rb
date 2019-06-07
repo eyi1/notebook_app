@@ -1,5 +1,6 @@
 module Api::V1
     class UsersController < ApplicationController
+      #before_action :authenticate_user
       before_action :set_user, only: [:show, :update, :destroy]
 
       def index
@@ -7,11 +8,20 @@ module Api::V1
       render json: @users
       end
 
+      # def create
+      #   @user = User.new(user_params)
+      #   if @user.save
+      #     @user.create
+      #       render json: @user
+      #   else
+      #     render json: @user.errors, status: 400
+      #   end
+      # end
+
       def create
         @user = User.new(user_params)
-        if @user.save
-          @user.create
-            render json: @user
+        if @user.valid? && @user.save
+          render json: @user
         else
           render json: @user.errors, status: 400
         end
@@ -32,6 +42,16 @@ module Api::V1
       def destroy
         @user.destroy
       end
+
+      def find
+        @user = User.find_by(email: params[:user][:email])
+        if @user
+          render json: @user
+        else
+          @errors = @user.errors.full_messages
+          render json: @errors
+        end
+       end
 
       private
       def set_user
