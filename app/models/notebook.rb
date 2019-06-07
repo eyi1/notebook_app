@@ -4,4 +4,5 @@ class Notebook < ApplicationRecord
 
     accepts_nested_attributes_for :notes
    
+    validates :name, presence: true
 end
