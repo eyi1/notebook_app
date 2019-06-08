@@ -19,4 +19,9 @@ addons:
 
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rake spec
   - bundle exec rspec
+
+branches:
+  only: 
+    - master
