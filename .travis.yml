@@ -28,6 +28,7 @@ git:
 before_install:
   - gem update --system
   - gem install bundler
+  - bunlde install
 install: 
   - gem install rails
 # before_script:
@@ -40,16 +41,18 @@ addons:
 # before_install: 
 #   - bundle install
 
-script:
-  - bundle exec rails db:migrate RAILS_ENV=test
-  - bundle exec rake spec
-  - bundle exec rspec
-
 # script:
-#  — bundle install — jobs=3 — retry=3
-#  — bundle exec rake db:create
-#  — bundle exec rake db:migrate
-#  — bundle exec rspec
+#   - bundle exec rails db:migrate RAILS_ENV=test
+#   - bundle exec rake spec
+#   - bundle exec rspec
+
+script:
+ — bundle install — jobs=3 — retry=3
+ — bundle exec rake db:create
+ — bundle exec rake db:migrate
+ — bundle exec rspec
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rake spec
 
 branches:
   only: 
