@@ -13,6 +13,9 @@ before_script:
   - mysql -e 'create database mydb_test'
 bundler_args: --binstubs=./bundler_stubs
 
+git:
+  submodules: false
+
 # - 1.9.3
 # - jruby-19mode
 # - rbx-2
