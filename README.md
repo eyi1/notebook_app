@@ -3,7 +3,7 @@
 A simple note-taking app to help users organize their notes. 
 Built using React, Redux, and Rails API.
 
-##Table of Contents
+## Table of Contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
