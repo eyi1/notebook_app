@@ -40,14 +40,14 @@ Steps:
 ```
 
 ## Code Status
-https://travis-ci.org/eyi1/notebook_app.svg?branch=master
+[![Build Status](https://travis-ci.org/eyi1/notebook_app.svg?branch=master)](https://travis-ci.org/eyi1/notebook_app)
 
-##Future Revisions
+## Future Revisions
 
 Future inclusion of:
 
 User authentication
 
-##License
+## License
 
 The gem is available as open source under the terms of the MIT License.
