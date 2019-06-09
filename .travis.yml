@@ -36,8 +36,8 @@ git:
 # addons:
 #   postgresql: 11
 
-# before_install: 
-#   - bundle install
+before_install: 
+  - bundle install
 
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
