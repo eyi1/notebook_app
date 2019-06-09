@@ -28,10 +28,11 @@ git:
 before_install:
   - gem update --system
   - gem install bundler
-install: gem install rails
-before_script:
-  - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database travis_ci_test;' -U postgres
+install: 
+  - gem install rails
+# before_script:
+#   - cp config/database.yml.travis config/database.yml
+#   - psql -c 'create database travis_ci_test;' -U postgres
 
 addons:
   postgresql: 11
@@ -50,7 +51,7 @@ script:
 #  — bundle exec rake db:migrate
 #  — bundle exec rspec
 
-# branches:
-#   only: 
-#     - master
+branches:
+  only: 
+    - master
 
