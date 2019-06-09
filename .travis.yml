@@ -8,9 +8,9 @@ rvm:
 # script:
 #   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
 #   - bundle exec rspec test/
-# before_script:
-#   - cp config/database.travis.yml config/database.yml
-#   #- mysql -e 'create database mydb_test'
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  #- mysql -e 'create database mydb_test'
 # bundler_args: --binstubs=./bundler_stubs
 
 git:
@@ -51,9 +51,7 @@ script:
  — bundle exec rake db:create
  — bundle exec rake db:migrate
  — bundle exec rspec
-- bundle exec rails db:migrate RAILS_ENV=test
-- bundle exec rake spec
-
+å
 branches:
   only: 
     - master
