@@ -6,6 +6,9 @@ rvm:
 gemfile:
   - Gemfile
 
+git:
+  submodules: false
+
 install: 
   - bundle install
 
