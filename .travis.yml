@@ -7,10 +7,10 @@ gemfile:
   - Gemfile
 
 git:
-  submodules: .gitmodules
+  submodules: false
 
-before_install:
-  - git submodule update --init --recursive
+# before_install:
+#   - git submodule update --init --recursive
 
 install: 
   - bundle install
