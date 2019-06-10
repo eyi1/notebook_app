@@ -1,13 +1,13 @@
 language: ruby
 
 rvm:
-  - 2.5
+  - 2.5.
 
 gemfile:
   - Gemfile
 
 git:
-  submodules: false
+  submodules: .gitmodules
 
 before_install:
   - git submodule update --init --recursive
