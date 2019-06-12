@@ -13,8 +13,8 @@ services:
   - postgresql: "11"
 
 before_install:
-  - git submodule update --init --recursive
-  - psql -c 'create database travis_ci_test;' -U postgres
+  #- git submodule update --init --recursive
+  - psql -c 'create database eunjeongyi;' -U postgres
   - bundle install
 
 # before_script:
