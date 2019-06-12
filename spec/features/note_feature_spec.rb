@@ -13,9 +13,9 @@ RSpec.feature "Notes", type: :feature do
         end
 
         context "notes page" do
-            it 'does display notes' do
+          it 'does display notes' do
               visit '/api/v1/notes'
-               Note.all.each do |note|
+              Note.all.each do |note|
               expect(page).to have_content(note.title)
               expect(page).to have_content(note.content)
             end
