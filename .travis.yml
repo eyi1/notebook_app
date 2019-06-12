@@ -16,6 +16,7 @@ before_install:
 #   - git submodule update --init --recursive
 #psql -c 'create database travis_ci_test;' -U postgres
 - bundle install
+- bundle install — jobs=3 — retry=3
 
 script:
   - bundle exec rspec spec
