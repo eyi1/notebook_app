@@ -61,7 +61,6 @@ module Api::V1
       end
     end
     
-
     private
 
     def set_notebook
