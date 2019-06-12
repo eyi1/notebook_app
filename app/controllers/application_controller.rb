@@ -17,11 +17,10 @@ class ApplicationController < ActionController::API
     def current_user
         begin
             User.find_by(id: decode_token)
+            #User.find_by(id: JWT.decode(request.headers["Authorization"], ENV["TOKEN_SECRET"])[0]["id"])
         rescue
             nil
         end
-        
-     #   User.find_by(id: JWT.decode(request.headers["Authorization"], ENV["TOKEN_SECRET"])[0]["id"])
-        
     end
+
 end
