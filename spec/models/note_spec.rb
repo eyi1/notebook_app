@@ -11,14 +11,9 @@ RSpec.describe Note, :type => :model do
     it "is not valid without a content" do
         subject.content = nil
         expect(subject).to_not be_valid
-      end
+    end
 
     describe "Associations" do
         it { should belong_to(:notebook) }
-    end
-
-    # describe "Validations" do
-    #     it { should validate_presence_of(:user) }
-    #   end
-    
+    end 
 end
