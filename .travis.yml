@@ -9,12 +9,12 @@ rvm:
 git:
   submodules: false
 
-# services:
-#   - postgresql: "11"
+services:
+  - postgresql: "11"
 
 before_install:
 #   - git submodule update --init --recursive
-- psql -c 'create database travis_ci_test;' -U postgres
+#psql -c 'create database travis_ci_test;' -U postgres
 - bundle install
 
 script:
