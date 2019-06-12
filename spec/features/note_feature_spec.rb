@@ -12,7 +12,7 @@ RSpec.feature "Notes", type: :feature do
           end
         end
 
-        context "logged in" do
+        context "notes page" do
             it 'does display notes' do
               visit '/api/v1/notes'
                Note.all.each do |note|
@@ -20,6 +20,13 @@ RSpec.feature "Notes", type: :feature do
               expect(page).to have_content(note.content)
             end
           end
+
+          scenario "user visits notes page" do
+            visit "api/v1/notes"
+            expect(page).to have_http_status(200)
+            #expect(response.status).to eq(200)          
+          end
+
         end
     end
 end
