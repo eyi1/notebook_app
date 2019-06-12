@@ -16,6 +16,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'foreman', '~> 0.82.0'
 gem 'active_model_serializers'
 gem 'knock'
+gem 'jwt'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -23,6 +24,8 @@ gem 'knock'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'travis'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
