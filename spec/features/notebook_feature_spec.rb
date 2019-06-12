@@ -11,21 +11,13 @@ RSpec.feature "Notebooks", type: :feature do
         notebooks = Notebook.all
          expect(page).to_not have_content(notebooks)
       end
+
+      scenario "user visits notebooks page" do
+        visit "api/v1/notebooks"
+        expect(page).to_not have_http_status(200)
+        #expect(response.status).to eq(200)          
+      end
     end
-
-    # context "logged in" do
-
-    #   before(:each) do
-    #     @user = User.last
-    #     #login_as(@user, scope: :user)
-    #   end
-
-    #   it 'does display notebooks' do
-    #     user_notebooks = @user.notebooks
-    #     visit '/api/v1/notebooks'
-    #     expect(page).to have_content(user_notebooks)
-    #   end
-    # end
 
   end
 end
