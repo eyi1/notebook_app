@@ -12,10 +12,10 @@ git:
 services:
   - postgresql: "11"
 
-# before_install:
-#   - git submodule update --init --recursive
-#psql -c 'create database travis_ci_test;' -U postgres
-# - bundle install
+before_install:
+  - git submodule update --init --recursive
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - bundle install
 
 # before_script:
 #   - psql --version
@@ -23,8 +23,8 @@ services:
 #   - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
 #   - cp config/database.yml.travis config/database.yml
 
-before_script:
-    - cp config/database.yml.travis config/database.yml
+# before_script:
+#     - cp config/database.yml.travis config/database.yml
 
 script:
   - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
