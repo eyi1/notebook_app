@@ -8,20 +8,17 @@ module Api::V1
       render json: @users
       end
 
-      # def create
-      #   @user = User.new(user_params)
-      #   if @user.save
-      #     @user.create
-      #       render json: @user
-      #   else
-      #     render json: @user.errors, status: 400
-      #   end
-      # end
-
       def create
         @user = User.new(user_params)
         if @user.valid? && @user.save
-          render json: @user
+          token = generate_token({id: @user.id})
+          response = {
+            user: UserSerializer.new(@user),
+            jwt: token
+          }
+
+          render json: response
+
         else
           render json: @user.errors, status: 400
         end
@@ -44,7 +41,8 @@ module Api::V1
       end
 
       def find
-        @user = User.find_by(email: params[:user][:email])
+        @user = User.find_by(email: params[:user][:email_string])
+        #@user = User.find_by(id: current_user.id)
         if @user
           render json: @user
         else
@@ -59,7 +57,7 @@ module Api::V1
       end
 
       def user_params
-        params.require(:user).permit(:name, :email, :password)
+        params.require(:user).permit(:name, :email_string, :password)
       end
       
     end
