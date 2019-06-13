@@ -10,7 +10,11 @@ git:
   submodules: false
 
 services:
-  - postgresql: "11"
+  # - postgresql: "11"
+  - postgresql
+
+addons:
+  postgresql: "11.3"
 
 before_install:
   # - bundle install
