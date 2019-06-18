@@ -4,6 +4,7 @@ module Api::V1
 
     def index
      #@notebooks = Notebook.all 
+     #byebug
       if logged_in?
        @notebooks = current_user.notebooks
        render json: @notebooks
