@@ -1,6 +1,5 @@
 module Api::V1
     class UsersController < ApplicationController
-      #before_action :authenticate_user
       before_action :set_user, only: [:show, :update, :destroy]
 
       def index
@@ -41,8 +40,7 @@ module Api::V1
       end
 
       def find
-        @user = User.find_by(email: params[:user][:email_string])
-        #@user = User.find_by(id: current_user.id)
+        @user = User.find_by(email_string: params[:email_string])
         if @user
           render json: @user
         else

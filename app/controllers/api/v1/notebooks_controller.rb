@@ -4,14 +4,14 @@ module Api::V1
 
     def index
      #@notebooks = Notebook.all 
+     #byebug
       if logged_in?
        @notebooks = current_user.notebooks
        render json: @notebooks
       else
-       render json: { message: "not logged in" }, status: 403
+       render json: { message: "not logged in" }, status: 403 #forbidden
       end
     end
-
 
     def create
       if logged_in?
@@ -21,11 +21,11 @@ module Api::V1
         if @notebook && @notebook.save
             render json: @notebook
         else
-            render json: { message: notebook.errors }, status: 400
+            render json: { message: notebook.errors }, status: 400 #bad request: contains incorrect syntax
         end
 
       else
-        render json: { message: "not logged in" }, status: 403
+        render json: { message: "not logged in" }, status: 403 #forbidden
       end
     end
 
@@ -33,7 +33,7 @@ module Api::V1
       if logged_in?
         render json: @notebook
       else
-        render json: { message: "not logged in" }, status: 403
+        render json: { message: "not logged in" }, status: 403 #forbidden
       end
     end
 
@@ -42,22 +42,22 @@ module Api::V1
         if @notebook.update(name: params[:name], user_id: current_user.id)
           render json: @notebook
         else
-          render json: { message: @notebook.errors }, status: 400
+          render json: { message: @notebook.errors }, status: 400 #bad request: contains incorrect syntax
         end
       else
-        render json: { message: "not logged in" }, status: 403
+        render json: { message: "not logged in" }, status: 403 #forbidden
       end
     end
 
     def destroy
       if logged_in?
         if @notebook.destroy
-          render json: { message: "Successfully removed item." }, status: 204
+          render json: { message: "Successfully removed item." }, status: 204 #successful
         else
-          render json: { message: "Unable to remove item" }, status: 400
+          render json: { message: "Unable to remove item" }, status: 400 #bad request: contains incorrect syntax
         end
       else
-        render json: { message: "not logged in" }, status: 403
+        render json: { message: "not logged in" }, status: 403 #forbidden
       end
     end
     

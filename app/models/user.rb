@@ -7,5 +7,5 @@ class User < ApplicationRecord
 
     validates :name, presence: true
     validates :email_string, uniqueness: true, presence: true
-    validates :password_digest, presence: true, length: { minimum: 6 }
+   # validates :password_digest, presence: true, length: { minimum: 6 }
 end

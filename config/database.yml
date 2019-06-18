@@ -34,8 +34,6 @@ test:
   adapter: postgresql
   database: eunjeongyi
   pool: 5
-  # adapter: postgresql
-  # database: travis_ci_test
 
 production:
   adapter: postgresql
