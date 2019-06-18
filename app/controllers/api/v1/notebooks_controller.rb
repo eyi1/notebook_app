@@ -3,14 +3,14 @@ module Api::V1
     before_action :set_notebook, only: [:show, :update, :destroy]
 
     def index
-     #@notebooks = Notebook.all 
+     @notebooks = Notebook.all 
      #byebug
-      if logged_in?
-       @notebooks = current_user.notebooks
-       render json: @notebooks
-      else
-       render json: { message: "not logged in" }, status: 403 #forbidden
-      end
+      # if logged_in?
+      #  @notebooks = current_user.notebooks
+      #  render json: @notebooks
+      # else
+      #  render json: { message: "not logged in" }, status: 403 #forbidden
+      # end
     end
 
     def create
