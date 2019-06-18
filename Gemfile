@@ -12,7 +12,8 @@ gem 'puma', '~> 3.11'
 gem 'pg', '~> 0.18.4'
 gem 'activerecord', '~> 5.0', '>= 5.0.0.1'
 gem 'activerecord-postgresql-adapter', '~> 0.0.1'
-gem 'rack-cors', require: 'rack/cors'
+gem 'rack-cors'
+#, require: 'rack/cors'
 gem 'foreman', '~> 0.82.0'
 gem 'active_model_serializers'
 gem 'knock'
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'rack_session_access'
   gem 'capybara', '>= 2.15'
   gem "database_cleaner"
+  gem 'pry'
 end
 
 group :development do
