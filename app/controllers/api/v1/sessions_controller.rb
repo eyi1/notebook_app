@@ -15,7 +15,7 @@ module Api::V1
         
                 render json: response   
             else
-                render json: { errors: { message: "unable to find user with that email or password" } }, status: 500
+                render json: { errors: { message: "unable to find user with that email or password" } }, status: 500 #server error
                 #render json: @user.errors, status: 400
             end
             
