@@ -4,17 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 7.0.3'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'pg', '~> 0.18.4'
-gem 'activerecord', '~> 5.0', '>= 5.0.0.1'
+gem 'activerecord', '~> 7.0'
 gem 'activerecord-postgresql-adapter', '~> 0.0.1'
 gem 'rack-cors'
 #, require: 'rack/cors'
-gem 'foreman', '~> 0.82.0'
+gem 'foreman', '~> 0.87.2'
 gem 'active_model_serializers'
 gem 'knock'
 gem 'jwt'
@@ -25,7 +25,7 @@ gem 'jwt'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'travis'
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'dotenv-rails', '~> 2.7'
 
 
 # Use ActiveStorage variant
@@ -43,7 +43,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 3.8'
   gem 'rack_session_access'
   gem 'capybara', '>= 2.15'
   gem "database_cleaner"
